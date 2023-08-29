@@ -180,6 +180,7 @@ h3 {
 
 
 .form {
+    display: none;
     background-color: var(--gray);
     width: 80%;
     margin: 0 auto;

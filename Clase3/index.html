@@ -39,7 +39,7 @@
                     </svg>
                 </a>
             </div>
-            <a class="button" href="#">Contacto</a>
+            <a class="button" id="alertButton" href="#">Contacto</a>
         </div>
     </section>
 
@@ -49,7 +49,7 @@
         <div class="subjects">
             <section class="subject">
                 <h3>Html</h3>
-                <div class="icons">
+                <div class="icons" onclick="showPopup('Html')">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-html5" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
@@ -61,7 +61,7 @@
 
             <section class="subject">
                 <h3>CSS</h3>
-                <div class="icons">
+                <div class="icons" onclick="showPopup('CSS')">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-css3" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" />
@@ -73,7 +73,7 @@
 
             <section class="subject">
                 <h3>Deploy</h3>
-                <div class="icons">
+                <div class="icons" onclick="showPopup('Deply')">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rocket" width="52" height="52" viewBox="0 0 24 24" stroke-width="2" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                     <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
@@ -85,9 +85,10 @@
             </section>
             
         </div>
-
-        <h2 class="title">Contacto</h2>
-        <form class="form"  action="#">
+        
+        <span class="button" id="toogleButton">Mostrar Formulario</span>
+        <h2 class="title" id="titleContact">Formulario no desplegado</h2>
+        <form class="form" id="contactForms"  action="#">
             <fieldset>
                 <legend>Completa el formulario</legend>
 
@@ -122,12 +123,13 @@
         </form>
     </section>
 
+   </main>
+
     <footer class="footer">
         2023-02
     </footer>
-        
 
-   </main>
+    <script src="/Clase3/js/script.js"></script>
 
 </body>
 </html>
