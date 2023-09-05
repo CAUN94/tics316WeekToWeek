@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="abrirPopUp()">Abrir</button>
+    <div id="popUp" style="display: none;">
+        <h2>Contenido PopUp</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, mollitia ducimus illum error sunt, voluptatem enim maxime rerum veritatis omnis pariatur nulla dolor. Nemo magnam excepturi alias minus tenetur. Saepe!</p>
+        <button onclick="cerrarPopUp()">Cerrar</button>
+    </div>
+
+    <script>
+        function abrirPopUp(){
+            document.getElementById('popUp').style.display = "block"
+        }
+
+        function cerrarPopUp(){
+            document.getElementById('popUp').style.display = "none"
+        }
+    </script>
+</body>
+</html>

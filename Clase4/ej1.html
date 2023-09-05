@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 1</title>
+</head>
+<body>
+    <h1>Cambiar contenido</h1>
+    <button
+        onmouseover="cambiarTexto()"
+        onclick="volverNormal()"
+    >
+    Pasa por encima mio</button>
+    <p id="miParrafo">Texto Inicial</p>
+
+    <script>
+        function cambiarTexto(){
+            var parrafo = document.getElementById('miParrafo')
+            var textoAleatorio = [
+                'Texto Aleatorio 1',
+                'Texto Aleatorio 2',
+                'Texto Aleatorio 3',
+                'Texto Aleatorio 4',
+                'Texto Aleatorio 5',
+                'Texto Aleatorio 6'
+            ]
+
+            var indice = Math.floor(Math.random()*textoAleatorio.length)
+
+            parrafo.innerHTML = textoAleatorio[indice]
+        }
+
+        function volverNormal(){
+            var parrafo = document.getElementById('miParrafo')
+            parrafo.innerHTML = 'Texto Inicial'
+            parrafo.style.fontSize = '80px'
+            parrafo.style.background = 'red'
+        }
+    </script>
+</body>
+</html>

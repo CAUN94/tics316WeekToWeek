@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 2</title>
+</head>
+<body>
+    <img src="https://as01.epimg.net/epik/imagenes/2021/01/11/portada/1610380987_204647_1610381073_noticia_normal_recorte1.jpg" alt="perrito" style="width: 300px;"
+    onclick="duplicarImagen()"
+    >
+
+    <script>
+        function duplicarImagen(){
+            var imagenOriginal = document.querySelector("img")
+            var imagenDuplicada = imagenOriginal.cloneNode()
+            document.body.appendChild(imagenDuplicada)
+
+        }
+    </script>
+</body>
+</html>

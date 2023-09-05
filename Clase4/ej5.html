@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 5</title>
+</head>
+<body>
+    <h2>Agregar a lista</h2>
+    <form id="formulario">
+        <label for="nuevoElemnto">Nuevo Elemento</label>
+        <input type="text" id="nuevoElemento" required>
+        <button type="submit">Agregar</button>
+    </form>
+    <ul id="lista">
+        
+    </ul>
+
+    <script>
+        var formulario = document.getElementById('formulario');
+
+        var lista = document.getElementById('lista');
+
+        formulario.addEventListener("submit", function(event){
+            var nuevoElemento = document.getElementById('nuevoElemento').value;
+            
+
+            var elementoLista = document.createElement("li");
+            elementoLista.textContent = nuevoElemento;
+            lista.appendChild(elementoLista);
+
+            document.getElementById('nuevoElemento').value = ''
+        });
+    </script>
+</body>
+</html>

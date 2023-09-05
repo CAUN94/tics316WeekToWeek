@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo 4</title>
+</head>
+<body>
+    <button onclick="mostrarFrase()">
+        Mostrar Frase
+    </button>
+    <p id="fraseMostrada"></p>
+
+    <script>
+        var frases = [
+            'Me entere por la prensa',
+            'Esto no prendio',
+            'Frase al azar',
+            'Etc Etc Etc'
+        ]
+
+
+        function mostrarFrase(){
+            var indice = Math.floor(Math.random()*frases.length)
+            var frase = frases[indice]
+            document.getElementById('fraseMostrada').innerHTML = frase
+        }
+    </script>
+</body>
+</html>
