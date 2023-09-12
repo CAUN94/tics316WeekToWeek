@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Página Web</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.x.x/dist/alpine.js" defer></script>
+</head>
+<body x-data="{ showSection1: false, showSection2: false, showSection3: false, showCard: false }">
+  <!-- Menú de Navegación -->
+  <nav class="bg-blue-500 text-white py-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Mi Sitio Web</h1>
+      <ul class="flex space-x-4">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Acerca de</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Sección de Iconos con Flexbox -->
+  <section class="bg-gray-100 py-12">
+    <div class="container mx-auto flex justify-center space-x-8">
+      <div class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-device-desktop" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+            <path d="M7 20h10" />
+            <path d="M9 16v4" />
+            <path d="M15 16v4" />
+        </svg>
+        <h2 class="text-lg font-semibold">Fotografía</h2>
+        <p>Explora nuestras fotos</p>
+      </div>
+      <div class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-device-desktop" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+            <path d="M7 20h10" />
+            <path d="M9 16v4" />
+            <path d="M15 16v4" />
+        </svg>
+        <h2 class="text-lg font-semibold">Diseño Gráfico</h2>
+        <p>Crea arte visual</p>
+      </div>
+      <div class="text-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mx-auto icon icon-tabler icon-tabler-device-desktop" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="#00abfb" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" />
+            <path d="M7 20h10" />
+            <path d="M9 16v4" />
+            <path d="M15 16v4" />
+        </svg>
+        <h2 class="text-lg font-semibold">Música</h2>
+        <p>Crea arte visual</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Secciones de Información en Cuadrícula -->
+  <section class="py-12">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Sección 1 -->
+      <div class="bg-white rounded p-6 shadow">
+        <h2 class="text-lg font-semibold mb-4">Servicio 1</h2>
+        <p x-show="showSection1">Descripción del servicio 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit rerum quibusdam necessitatibus illum quam cumque harum ea magnam repudiandae ipsa? Sequi et quis nostrum esse saepe numquam aliquam est odio.</p>
+        <button @click="showSection1 = !showSection1" class="bg-blue-500 text-white px-4 py-2 mt-4">Ver Más</button>
+      </div>
+      <!-- Sección 2 -->
+      <div class="bg-white rounded p-6 shadow">
+        <h2 class="text-lg font-semibold mb-4">Servicio 2</h2>
+        <p x-show="showSection2">Descripción del servicio 2. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea ducimus, tenetur reiciendis minus obcaecati, perferendis accusantium quo enim temporibus tempore ipsa eos esse distinctio autem, eaque illo quasi aliquam aspernatur.</p>
+        <button @click="showSection2 = !showSection2" class="bg-blue-500 text-white px-4 py-2 mt-4">Ver Más</button>
+      </div>
+      <!-- Sección 3 -->
+      <div class="bg-white rounded p-6 shadow">
+        <h2 class="text-lg font-semibold mb-4">Servicio 3</h2>
+        <p x-show="showSection3">Descripción del servicio 3. Lorem ipsum dolor sit amet consectetur adipisicing elit. In nam accusamus quisquam quibusdam ea velit ratione sint. Tempora libero laboriosam repellat. Totam praesentium magni necessitatibus obcaecati quis non nihil nulla.</p>
+        <button @click="showSection3 = !showSection3" class="bg-blue-500 text-white px-4 py-2 mt-4">Ver Más</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Botones -->
+  <section class="bg-gray-200 py-8">
+    <div class="container mx-auto flex justify-center space-x-4">
+      <button class="bg-blue-500 text-white px-4 py-2 rounded-lg">Botón 1</button>
+      <button class="bg-red-500 text-white px-4 py-2 rounded-lg">Botón 2</button>
+    </div>
+  </section>
+
+  <!-- Formulario -->
+  <section class="py-8">
+    <div class="container mx-auto">
+      <h2 class="text-2xl font-semibold mb-4">Contáctanos</h2>
+      <form @submit.prevent="showCard = true">
+        <div class="mb-4">
+          <label for="nombre" class="block text-gray-800">Nombre</label>
+          <input type="text" id="nombre" name="nombre" class="w-full border p-2 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="correo" class="block text-gray-800">Correo Electrónico</label>
+          <input type="email" id="correo" name="correo" class="w-full border p-2 rounded">
+        </div>
+        <div class="mb-4">
+          <label for="mensaje" class="block text-gray-800">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4" class="w-full border p-2 rounded"></textarea>
+        </div>
+        <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+  
+
+  <!-- Tarjeta de Contacto -->
+  <div x-show="showCard" class="bg-white rounded p-6 shadow my-8 mx-auto max-w-md">
+    <h2 class="text-lg font-semibold mb-4">Datos de Contacto</h2>
+    <p><strong>Nombre:</strong> <span x-text="'Nombre: ' + $el.querySelector('#nombre').value"></span></p>
+    <p><strong>Correo:</strong> <span x-text="'Correo: ' + $el.querySelector('#correo').value"></span></p>
+    <p><strong>Mensaje:</strong> <span x-text="'Mensaje: ' + $el.querySelector('#mensaje').value"></span></p>
+  </div>
+
+  <!-- Pie de Página -->
+  <footer class="bg-blue-500 text-white py-4">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2023 Mi Sitio Web. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

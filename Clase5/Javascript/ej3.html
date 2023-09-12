@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Carrusel de Imágenes</title>
+    <style>
+        .carrusel {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h2>Carrusel de Imágenes</h2>
+    <div class="carrusel">
+        <img src="https://dibujosycolores.com/numeros/numero-1/numero-1-1.jpg" alt="Imagen 1" style="display: block;">
+        <img src="https://dibujosycolores.com/numeros/numero-2/numero-2-1.jpg" alt="Imagen 2" style="display: none;">
+        <img src="https://dibujosycolores.com/numeros/numero-3/numero-3-1.jpg" alt="Imagen 3" style="display: none;">
+    </div>
+
+    <script>
+        var carrusel = document.querySelector(".carrusel");
+        var imagenes = carrusel.querySelectorAll("img");
+        var indice = 0;
+
+        function cambiarImagen() {
+            imagenes[indice].style.display = "none";
+            indice = (indice + 1) % imagenes.length;
+            imagenes[indice].style.display = "block";
+        }
+
+        setInterval(cambiarImagen, 3000); // Cambiar cada 3 segundos
+    </script>
+</body>
+</html>
