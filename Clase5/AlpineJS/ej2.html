@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <title>Ej 2 AlpineJS</title>
+</head>
+<body x-data="{isVisible: false}">
+    <button @click="isVisible = !isVisible">Mostrar/Ocultar</button>
+    <p x-show="isVisible">	Este parrafo se muestra y oculta con AlpineJS</p>
+
+</body>
+</html>

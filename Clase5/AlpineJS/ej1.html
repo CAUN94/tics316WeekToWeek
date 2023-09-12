@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <title>Ej 1 AlpineJS</title>
+</head>
+<body>
+    <div x-data="{mensaje: 'Hola Mundo!!'}">
+        <h1 x-text="mensaje"></h1>
+        <button @click="mensaje = 'Cambio de texto'">Cambiar Texto</button>
+        <button @click="mensaje = 'Hola mundo' ">Cambiar Texto</button>
+        <button @click="mensaje = 'Cambio otra vez'">Cambiar Texto</button>
+        <button @click="mensaje = 'Una vez más'">Cambiar Texto</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.js" defer></script>
+    <title>Ej 3 AlpineJS</title>
+</head>
+<body x-data="{contador: 0}">
+    <p>Contador: <span x-text="contador"></span></p>
+    <button @click="contador--">Disminuir</button>
+    <button @click="contador++">Incrementar</button>
+</body>
+</html>
