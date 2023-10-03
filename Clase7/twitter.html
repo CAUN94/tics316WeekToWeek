@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    </head>
+</head>
 <body>
 
 <!-- Barra de navegación -->
+<!-- Componente NavBar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="#">Twitter</a>
@@ -41,13 +42,14 @@
 <div class="container mt-4">
   <div class="row">
     <!-- Columna de publicación -->
+    <!-- TweetForm -->
     <div class="col-md-3">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Nueva publicación</h5>
           <form>
             <div class="mb-3">
-              <textarea class="form-control" rows="3" placeholder="¿Qué está pasando?"></textarea>
+              <textarea class="form-control" rows="3" placeholder="¿Qué estas pensando?"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Publicar</button>
           </form>
@@ -58,6 +60,7 @@
     <!-- Columna de noticias -->
     <div class="col-md-6">
       <!-- Publicación individual -->
+      <!-- Tweets y Tweet -->
       <div class="card mb-3">
         <div class="card-body">
           <h5 class="card-title">Usuario de Twitter</h5>
@@ -66,26 +69,32 @@
           <a href="#" class="btn btn-primary"><i class="fas fa-retweet"></i> 10</a>
         </div>
       </div>
+      
 
       <!-- Agregar más publicaciones aquí -->
     </div>
 
     <!-- Columna de tendencias -->
     <div class="col-md-3">
+        <!-- Trends -->
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Tendencias</h5>
                 <ul class="list-group">
+                <!-- Trend -->
                 <li class="list-group-item">Tendencia 1</li>
                 <li class="list-group-item">Tendencia 2</li>
                 <li class="list-group-item">Tendencia 3</li>
                 </ul>
             </div>
         </div>
+
+        <!-- Following -->
         <div class="card mt-3">
             <div class="card-body">
                 <h5 class="card-title">Siguiendo</h5>
                 <ul class="list-group">
+                    <!-- Users -->
                     <li class="list-group-item">
                       <img src="https://picsum.photos/id/10/40/40" alt="Persona 1" class="img-thumbnail">
                       Persona 1
@@ -105,8 +114,6 @@
   
   </div>
 </div>
-
-<!-- Agregar pie de página si es necesario -->
 
 <!-- Scripts de Bootstrap y jQuery (asegúrate de tenerlos instalados) -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
