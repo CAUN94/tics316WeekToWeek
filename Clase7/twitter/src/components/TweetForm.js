@@ -1,14 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 
-function TweetForm(){
+function TweetForm(props){
+    const {onTweetSubmit} = props
+    const [tweet,setTweet] = useState('');
+
+    const handleTweetChange = (e) =>{
+        setTweet(e.target.value)
+    };
+
+    const handleTweetSubmit = (e) =>{
+        e.preventDefault();
+        if(tweet.trim() != '') {
+            onTweetSubmit(tweet)
+            setTweet('')
+        }
+    };
+    
     return(
-        <div class="col-md-3 mb-3">
+        <div class="col-md-3">
             <div class="card">
             <div class="card-body">
                 <h5 class="card-title">Nueva publicación</h5>
-                <form>
+                <form onSubmit={handleTweetSubmit}>
                 <div class="mb-3">
-                    <textarea class="form-control" rows="3" placeholder="¿Qué estas pensando?"></textarea>
+                    <textarea 
+                        className="form-control" 
+                        rows="3" 
+                        placeholder="¿Qué estas pensando?"
+                        value = {tweet}
+                        onChange={handleTweetChange}
+                        ></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Publicar</button>
                 </form>
