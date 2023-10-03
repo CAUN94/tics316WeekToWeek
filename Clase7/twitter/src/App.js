@@ -9,6 +9,7 @@ import Following from './components/Following'
 
 function App() {
   const [tweets,setTweets] = useState([]);
+  const [text,setText] = useState('Nombre Usuario');
 
   function addTweet(newTeet) {
     setTweets([newTeet,...tweets])
@@ -21,8 +22,16 @@ function App() {
         <div className="row">
           <TweetForm onTweetSubmit={addTweet}/>
             <div class="col-md-6 ">
+            <input
+              className='form-control mb-2'
+              type='text'
+              placeholder='Nombre Usuario'
+              value={text}
+              onChange={(e) => setText(e.target.value)}
+            >
+            </input>
             {tweets.map((tweet,index) => (
-              <Tweet key={index} content={tweet} />
+              <Tweet key={index} content={tweet} name={text} />
             ))}
           </div>
           <div class="col-md-3">
