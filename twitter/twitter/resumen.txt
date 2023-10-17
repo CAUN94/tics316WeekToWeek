@@ -1,0 +1,100 @@
+Clase 7
+
+Ingresamos a la carpeta de la collapse
+
+Descargamos twitter.html
+
+Crear poryectode react
+
+npx create-react-app twitter
+
+Vista Inicial esta en App.js
+
+Importe navbar
+
+Cree carpeta components
+
+Crear archivo NabBar.js
+function NabBar -> Crea NavBar
+
+Crear archivo TweetForm.js
+function TweetForm -> Crea TweetForm
+
+Crear archivo Tweets.js
+function Tweets -> Crea Tweets
+
+Crear archivo Trends.js
+function Trends -> Crea Trends
+function Trend -> Crea Trend
+
+Crear archivo Following.js
+function Following -> Crea Following
+function User -> Crea User
+
+Crear funcionalidad de la pagina
+- Formulario Funcional check
+- Que aparezcan los Tweets check
+- Que los Trend aparezcan dinamicamente check
+- Que los seguidres aparezcan de una lista ncheck
+- Nombre de Usuario que hace tweet
+
+Clase 8
+
+Crearemos rutas en nuestro sitio web
+
+- npm install react-router-dom@6
+
+En index.js agreamos el BrowserRouter
+- import { BrowserRouter as Router } from 'react-router-dom';
+
+Creamos la carpeta pages
+- Creamos el archivo HomePage.js
+- Creamos el archivo ProfilePage.js
+
+En homepage agrega toda la información que originalmente estaba en App.js
+y cambia todas las partes que dicen App por HomePage
+
+Despues en App.js importa
+- import { BrowserRouter , Route, Routes } from 'react-router-dom';
+- import HomePage from './pages/HomePage';
+- import ProfilePage from './pages/ProfilePage';
+
+En App.js cambia el return por
+- return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route path="profile" element={<ProfilePage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+
+Esta parte es para que se vea el contenido de HomePage y ProfilePage en Layout
+
+Ahora crear el archivo Layout.js
+- import { Outlet } from 'react-router-dom';
+
+Topa tu componente NavBar y adaptalo en Layout.js
+- <> return <NavBar /> <Outlet /> </>
+
+Adapta el componente NavBar.js
+Y cambia los href por <link to="/"></link>
+
+Ahora que tenemos esto listo crearemos algunas funciones extra para mejorar la experiencia de usuario y que sea una buena simulación de twitter.
+- Vamos a hacer que tweet aleatorios aparezcan cada cierto tiempo
+
+
+Vamos a hacer que tweet aleatorios aparezcan cada cierto tiempo
+- npm install random-words
+- import randomWords from 'random-words';
+
+Usamos useEffect para que se ejecute cada cierto tiempo
+Agreamos const [texts,setTexts] = useState([]) y además de crear un Tweet creamos un Text (que es el nombre del Usuario)
+
+
+
+
+
+

@@ -1,0 +1,37 @@
+Ingresamos a la carpeta de la collapse
+
+Descargamos twitter.html
+
+Crear poryectode react
+
+npx create-react-app twitter
+
+Vista Inicial esta en App.js
+
+Importe navbar
+
+Cree carpeta components
+
+Crear archivo NabBar.js
+function NabBar -> Crea NavBar
+
+Crear archivo TweetForm.js
+function TweetForm -> Crea TweetForm
+
+Crear archivo Tweets.js
+function Tweets -> Crea Tweets
+
+Crear archivo Trends.js
+function Trends -> Crea Trends
+function Trend -> Crea Trend
+
+Crear archivo Following.js
+function Following -> Crea Following
+function User -> Crea User
+
+Crear funcionalidad de la pagina
+- Formulario Funcional check
+- Que aparezcan los Tweets check
+- Que los Trend aparezcan dinamicamente check
+- Que los seguidres aparezcan de una lista ncheck
+- Nombre de Usuario que hace tweet
